@@ -12,5 +12,5 @@ sealed class BaseViewEvent {
 
     object ShowUserNotFoundError : BaseViewEvent()
 
-    data class ShowCustomError(val message: String) : BaseViewEvent()
+    data class ShowCustomError(val type: String, val message: String) : BaseViewEvent()
 }

@@ -22,7 +22,7 @@ class MainViewModel(
     val _coins = MutableLiveData<CoinsResponse>()
     val coins: LiveData<CoinsResponse>
         get() = _coins
-    val offset = MutableLiveData<Int>(0)
+    val offset = MutableLiveData<Int>(1)
     val limit = MutableLiveData<Int>(10)
 
     fun getCoins(offset: Int) = viewModelScope.launch {
@@ -35,5 +35,8 @@ class MainViewModel(
                 handleException(response.exception)
             }
         }
+    }
+    fun handleItemClick(item:CoinsResponse.Data.Coins){
+        _event.postValue(Event(MainViewEvent.NavigateToDetail(item)))
     }
 }

@@ -27,35 +27,25 @@ abstract class BaseViewModel : ViewModel() {
     private fun showConnectivityError() =
         _baseEvent.postValue(Event(BaseViewEvent.ShowConnectivityError))
 
-    private fun showCustomError(message: String) =
-        _baseEvent.postValue(Event(BaseViewEvent.ShowCustomError(message)))
+    private fun showCustomError(type: String, message: String) =
+        _baseEvent.postValue(Event(BaseViewEvent.ShowCustomError(type, message)))
 
     open fun handleException(e: Exception) {
         when (e) {
             is HttpException -> {
-                when (e.code()) {
-                    403 -> _baseEvent.postValue(Event(BaseViewEvent.ShowUserNotFoundError))
-
-                    else -> {
-                        if (e.code() in 499..599) {
-                            _baseEvent.postValue(Event(BaseViewEvent.ShowInternalServerError))
-                        } else {
-                            if (e.code() in 499..599) {
-                                _baseEvent.postValue(Event(BaseViewEvent.ShowInternalServerError))
-                            } else {
-                                try {
-                                    showCustomError(
-                                        Gson().fromJson(
-                                            e.response()?.errorBody()?.string(),
-                                            ApiError::class.java
-                                        ).detail
-                                    )
-                                } catch (exception: Exception) {
-                                    showCommonNetworkError()
-                                }
-                            }
-                        }
-                    }
+                try {
+                    showCustomError(
+                        Gson().fromJson(
+                            e.response()?.errorBody()?.string(),
+                            ApiError::class.java
+                        ).type,
+                        Gson().fromJson(
+                            e.response()?.errorBody()?.string(),
+                            ApiError::class.java
+                        ).message
+                    )
+                } catch (exception: Exception) {
+                    showCommonNetworkError()
                 }
             }
 

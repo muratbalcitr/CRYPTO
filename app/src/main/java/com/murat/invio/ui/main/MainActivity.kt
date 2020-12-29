@@ -10,6 +10,7 @@ import com.murat.invio.databinding.ActivityMainBinding
 import com.murat.invio.ext.observe
 import com.murat.invio.ext.observeEvent
 import com.murat.invio.network.responses.CoinsResponse
+import com.murat.invio.ui.main.coin_detail.CoinDetailActivity
 import com.murat.invio.utils.OnLoadMoreListener
 import com.murat.invio.utils.RecyclerViewLoadMoreScroll
 
@@ -28,10 +29,10 @@ class MainActivity :
         observeEvent(viewModel.event, ::onViewEvent)
         observe(viewModel.coins, ::onDataChange)
         setup()
-       /* viewBinding.swipe.setOnRefreshListener {
-            swipe.isRefreshing=false
-            viewModel.getCoins(viewModel.offset.value!!)
-        }*/
+        /* viewBinding.swipe.setOnRefreshListener {
+             swipe.isRefreshing=false
+             viewModel.getCoins(viewModel.offset.value!!)
+         }*/
         viewModel.getCoins(viewModel.offset.value!!)
     }
 
@@ -48,17 +49,28 @@ class MainActivity :
     }
 
     private fun onViewEvent(event: MainViewEvent) {
-        when(event){
-
+        when (event) {
+            is MainViewEvent.NavigateToDetail->{
+                startActivity(event.item.uuid?.let { CoinDetailActivity.newIntent(this, it) })
+            }
         }
     }
 
     private fun onDataChange(item: CoinsResponse) {
-        mainAdapter = MainAdapter(item.data.coins, viewModel)
-        viewBinding.recyclerView.apply {
-            this.setHasFixedSize(true)
-            this.adapter = mainAdapter
-            this.layoutManager=layoutManager
+        if (viewModel.offset.value == 1) {
+            mainAdapter = MainAdapter(item.data.coins, viewModel)
+            viewBinding.recyclerView.apply {
+                this.setHasFixedSize(true)
+                this.adapter = mainAdapter
+                this.layoutManager = layoutManager
+            }
+        } else {
+            mainAdapter.removeLoadingView()
+            scrollListener!!.setLoaded()
+            mainAdapter.notifyDataSetChanged()
+            viewModel.isLoadingMore.postValue(false)
+            mainAdapter.addData(item.data.coins)
+
         }
     }
 
@@ -68,7 +80,8 @@ class MainActivity :
             scrollListener!!.setLoaded()
             mainAdapter.notifyDataSetChanged()
             viewModel.isLoadingMore.postValue(false)
-        }else {
+        } else {
+            viewModel.isLoadingMore.postValue(true)
             mainAdapter.addLoadingView()
             var offset = viewModel.offset.value ?: 1
             offset += 1

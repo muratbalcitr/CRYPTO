@@ -26,19 +26,6 @@
             android:screenOrientation="portrait">
 
         </activity>
-        <activity
-            android:name="com.murat.invio.ui.main.web_view.WebViewActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.murat.invio.ui.main.detail_author_package.DetailAuthorActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.murat.invio.ui.main.detail_newspaper_package.DetailNewspaperActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name="com.murat.invio.ui.main.search_new.SearchFragment">
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".ui.main.coin_detail.CoinDetailActivity" />
     </application>
 </manifest>

@@ -14,6 +14,7 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/PagerViewModel.kt" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/article" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/author" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/coin_detail/CoinDetailActivity.kt" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/web_view" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/web_view/WebViewActivity.kt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/web_view/WebViewViewModel.kt" charset="UTF-8" />

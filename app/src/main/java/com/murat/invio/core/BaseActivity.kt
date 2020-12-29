@@ -46,12 +46,12 @@ abstract class BaseActivity<B : ViewDataBinding, M : BaseViewModel>(
 
     private fun onViewEvent(event: BaseViewEvent) {
         when (event) {
-            is BaseViewEvent.ShowCustomError -> showError(event.message)
+            is BaseViewEvent.ShowCustomError -> showError(event.type, event.message)
         }
     }
 
-    fun showError(error: String) {
-        Toast.make(this, ToastView.Type.ERROR, error).show()
+    fun showError(error: String, title: String) {
+        Toast.make(this, ToastView.Type.ERROR, title = title, description = error).show()
     }
 
     fun showCommonError() {
