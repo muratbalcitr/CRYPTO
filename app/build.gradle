@@ -115,6 +115,9 @@ dependencies {
     implementation deps.coil
     implementation deps.dots_indicator
     implementation deps.library_svg
+    implementation 'com.caverock:androidsvg-aar:1.4'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
 
     implementation 'com.google.android.material:material:1.2.1'
 }

@@ -58,7 +58,7 @@ class MainActivity :
 
     private fun onDataChange(item: CoinsResponse) {
         if (viewModel.offset.value == 1) {
-            mainAdapter = MainAdapter(item.data.coins, viewModel)
+            mainAdapter = MainAdapter(item.data.coins, viewModel,this)
             viewBinding.recyclerView.apply {
                 this.setHasFixedSize(true)
                 this.adapter = mainAdapter

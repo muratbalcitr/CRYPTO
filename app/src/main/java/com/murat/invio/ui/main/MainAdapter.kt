@@ -1,19 +1,27 @@
 package com.murat.invio.ui.main
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.graphics.drawable.PictureDrawable
 import android.os.Handler
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
+import com.murat.invio.R
 import com.murat.invio.core.BaseListAdapter
 import com.murat.invio.core.BaseViewHolder
 import com.murat.invio.databinding.ItemLoadingBinding
 import com.murat.invio.databinding.ViewHolderCoinItemBinding
 import com.murat.invio.network.responses.CoinsResponse
+import com.murat.invio.utils.svg.SvgSoftwareLayerSetter
+
 
 class MainAdapter(
     private var coinList: ArrayList<CoinsResponse.Data.Coins?>?,
-    val viewModel: MainViewModel
+    val viewModel: MainViewModel,
+    val context: Context
 ) : BaseListAdapter<CoinsResponse.Data.Coins>(
     itemsSame = { old, new -> old == new },
     contentsSame = { old, new -> old == new }
@@ -44,7 +52,7 @@ class MainAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         when (holder) {
             is CoinViewHolder -> {
-                holder.bind(viewModel, coinList?.get(position)!!)
+                holder.bind(viewModel, coinList?.get(position)!!, context)
             }
             is LoadingViewHolder -> {
                 var holder: LoadingViewHolder = holder
@@ -87,13 +95,20 @@ class MainAdapter(
     ) : BaseViewHolder<ViewHolderCoinItemBinding>(
         binding = ViewHolderCoinItemBinding.inflate(inflater, parent, false)
     ) {
-        @SuppressLint("SimpleDateFormat")
+        @SuppressLint("SimpleDateFormat", "CheckResult")
         fun bind(
             viewModel: MainViewModel,
-            coinResponse: CoinsResponse.Data.Coins
+            coinResponse: CoinsResponse.Data.Coins,
+            context: Context
         ) {
             binding.viewModel = viewModel
             binding.item = coinResponse
+            val requestBuilder = Glide.with(context)
+                .`as`(PictureDrawable::class.java)
+                .placeholder(R.drawable.ic_swap_calls_black_24dp)
+                .transition(withCrossFade())
+                .listener(SvgSoftwareLayerSetter())
+            requestBuilder.load(coinResponse.iconUrl).into(binding.imageView)
             binding.executePendingBindings()
         }
     }

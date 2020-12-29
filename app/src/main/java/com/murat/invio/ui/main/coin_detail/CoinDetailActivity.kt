@@ -26,6 +26,8 @@ class CoinDetailActivity :
 
     private fun onDataChange(item:CoinsDetailResponse){
         viewBinding.descriptionTextView.setText(Html.fromHtml(item.data.coins.description))
+
+
     }
     private fun onViewEvent(event: CoinDetailViewEvent) {
         when (event) {
