@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Toolbar">
+        <attr name="left_icon" format="reference" />
+        <attr name="title_text" format="string" />
+        <attr name="righ_text" format="string" />
+    </declare-styleable>
+    <declare-styleable name="BoloButton">
+        <attr name="button_title" format="string" />
+        <attr name="button_state" format="enum">
+            <enum name="idle" value="0" />
+            <enum name="disabled" value="1" />
+            <enum name="progress" value="2" />
+        </attr>
+        <attr name="button_style" format="enum">
+            <enum name="solid" value="0" />
+            <enum name="outline" value="1" />
+        </attr>
+        <attr name="button_shape" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+        <attr name="button_type" format="enum">
+            <enum name="regular" value="0" />
+            <enum name="alert" value="1" />
+            <enum name="semi_alert" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

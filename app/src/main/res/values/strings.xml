@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">YazarIO</string>
+
+    <string name="user_not_found_error">Kullanıcı bulunamadı</string>
+    <string name="something_went_wrong">Bir hata oluştu</string>
+    <string name="connectivity_error">Lütfen internet bağlantınızı kontrol ediniz</string>
+    <string name="internal_server_not_found">Opps.. Bir sorun oluştu</string>
+    <string name="attention">Dikkat</string>
+    <string name="login_required">Giriş yapmanız gerekiyor</string>
+    <string name="login">Giriş Yap</string>
+
+    <string name="skip">Atla</string>
+    <string name="start_v1">Başla</string>
+    <string name="author">Yazar</string>
+    <string name="authors">Yazarlar</string>
+    <string name="articles">Köşe Yazıları</string>
+    <string name="newspaper_detail">Gazete Detay</string>
+    <string name="newspapers">Gazeteler</string>
+    <string name="article_detail">Makale Detay</string>
+    <string name="continue_v1">Devam</string>
+    <string name="continue_v2">Devam Et</string>
+    <string name="sort_authors_name">Alfabetik</string>
+    <string name="sort_authors_favorites">Favoriler</string>
+    <string name="sort_authors_read">Çok Okunanlar</string>
+    <string name="sort_article_favorites">Favoriler</string>
+    <string name="sort_article_following">Takip Ettiklerim</string>
+    <string name="sort_article_read">Çok Okunanlar</string>
+    <string name="today">Bugün</string>
+    <string name="read">OKU</string>
+    <string name="all">Tümü</string>
+    <string name="no">Hayır</string>
+    <string name="ok">Tamam</string>
+    <string name="subscriber">Aboneliğim</string>
+    <string name="notifications">Bildirimler</string>
+    <string name="read_list">Okuma Listesi</string>
+     <string name="keyword">Anahtar Kelime</string>
+    <string name="statistic">İstatistik</string>
+    <string name="settings">Ayarlar</string>
+    <string name="navigation_drawer_open">open</string>
+    <string name="navigation_drawer_close">close</string>
+    <string name="search">Arama</string>
+    <string name="no_title" > </string>
+    <string name="success_later">Ekleme Başarılı</string>
+    <string name="shareTitle">Arkadaşlarınla paylaş</string>
+
+</resources>

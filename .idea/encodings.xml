@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/binding/BoloButtonBindings.kt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/binding/ButtonBindings.kt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/binding/ImageViewBindings.kt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/network/request_body" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/network/responses" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/MainActivity.kt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/MainActivityViewModel.kt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/MainFragment.kt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/MainPagerAdapter.kt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/MainViewModel.kt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/PagerViewModel.kt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/article" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/author" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/web_view" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/web_view/WebViewActivity.kt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/main/web_view/WebViewViewModel.kt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/prelogin" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/prelogin/welcome" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/widget/BoloButton.kt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/murat/invio/ui/widget/Toolbar.kt" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/bg_shadow.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_assignment_black_24dp.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_article.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_author.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_back.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_favori.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_follow.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_followed.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_foreground.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/selector_bottom_navigation.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail_author.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_prelogin.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_article.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_author.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_splash.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_welcome.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/item_loading.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/view_article.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/view_bolo_button.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/view_common_dialog_modal.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/view_toolbar.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/viewholder_article_item.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/viewholder_author_article_item.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/viewholder_author_item.xml" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/menu" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/navigation" charset="windows-1251" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
