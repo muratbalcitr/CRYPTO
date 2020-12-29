@@ -50,6 +50,7 @@ versions.drawable_toolbox = '1.0.7'
 versions.material_dialog = '3.2.1'
 versions.coil = '0.9.5'
 versions.indicatorseekbar = '2.1.2'
+versions.library_svg="1.1.0"
 versions.rounded_image = '2.3.0'
 
 ext.versions = versions
@@ -63,7 +64,8 @@ deps.crashlytics_plugin = "com.google.firebase:firebase-crashlytics-gradle:$vers
 deps.data_binding = "com.android.databinding:compiler:$versions.data_binding"
 deps.drawable_toolbox = "com.github.duanhong169:drawabletoolbox:$versions.drawable_toolbox"
 deps.coil = "io.coil-kt:coil:$versions.coil"
-deps.dots_indicator = "com.tbuonomo.andrui:viewpagerdotsindicator:$versions.dots_indicator"
+deps.library_svg="com.pixplicity.sharp:library:$versions.library_svg"
+ deps.dots_indicator = "com.tbuonomo.andrui:viewpagerdotsindicator:$versions.dots_indicator"
 deps.rounded_image = "com.makeramen:roundedimageview:$versions.rounded_image"
 
 // JAX-B dependencies for JDK 9+

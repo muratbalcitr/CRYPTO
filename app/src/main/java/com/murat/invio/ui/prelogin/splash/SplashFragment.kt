@@ -12,11 +12,6 @@ import com.murat.invio.ui.main.MainActivity
 import java.text.DateFormat
 import java.util.*
 
-/**
- * @user: omer.karaca
- * @date: 2020-01-21
- */
-
 class SplashFragment : BaseFragment<FragmentSplashBinding, SplashViewModel>(
     layoutId = R.layout.fragment_splash
 ) {
@@ -29,21 +24,8 @@ class SplashFragment : BaseFragment<FragmentSplashBinding, SplashViewModel>(
         viewBinding.viewModel = viewModel
         observeEvent(viewModel.event, ::onViewEvent)
 
-        val client =
-            Settings.Secure.getString(requireContext().contentResolver, Settings.Secure.ANDROID_ID)
-        val downloadEt = DateFormat.getDateInstance().format(Date())
-        val deviceHost = Build.HOST
-        val osVersion = Build.VERSION.RELEASE
 
-        val clientRequest =
-            ClientRequest(client, downloadEt, deviceHost, osVersion)
-        viewModel.prefManager.clientId =
-            Settings.Secure.getString(requireContext().contentResolver, Settings.Secure.ANDROID_ID)
-        if (viewModel.prefManager.clientId.isNullOrEmpty()) {
-            viewModel.addClient(clientRequest)
-        } else {
             viewModel.continueProcess()
-        }
     }
 
 
@@ -54,15 +36,11 @@ class SplashFragment : BaseFragment<FragmentSplashBinding, SplashViewModel>(
             }
 
             SplashViewEvent.NavigateToMain -> {
-              //  startActivity(Intent(requireActivity(),CustomNavigationActivity:))
-                startActivity(MainActivity.newIntent(requireContext())).apply { requireActivity().finish() }
+                 startActivity(MainActivity.newIntent(requireContext())).apply { requireActivity().finish() }
             }
 
             SplashViewEvent.NetworkError -> showCommonError()
 
-            SplashViewEvent.Start -> {
-
-            }
         }
     }
 }

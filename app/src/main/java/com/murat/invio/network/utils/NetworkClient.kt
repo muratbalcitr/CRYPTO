@@ -56,7 +56,8 @@ object NetworkClient {
             }
         }
         return OkHttpClient.Builder()
-             .addNetworkInterceptor(loggingInterceptor)
+            .addInterceptor(AuthInterceptor(preferenceManager))
+            .addNetworkInterceptor(loggingInterceptor)
             .connectTimeout(CONNECT_TIMEOUT, TimeUnit.SECONDS)
             .readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
             .writeTimeout(WRITE_TIMEOUT, TimeUnit.SECONDS)

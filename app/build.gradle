@@ -114,6 +114,7 @@ dependencies {
     implementation deps.jaxb
     implementation deps.coil
     implementation deps.dots_indicator
+    implementation deps.library_svg
 
     implementation 'com.google.android.material:material:1.2.1'
 }

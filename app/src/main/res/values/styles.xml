@@ -7,7 +7,6 @@
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
 
     <style name="ActivityAnimation" parent="@android:style/Animation.Activity">
@@ -16,57 +15,11 @@
         <item name="android:activityCloseEnterAnimation">@anim/fade_out</item>
         <item name="android:activityCloseExitAnimation">@anim/fade_in</item>
     </style>
-    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
-        <item name="spinBars">true</item>
-        <item name="color">@android:color/white</item>
-    </style>
-    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="android:textSize">14sp</item>
-        <item name="android:textColor">?android:textColorSecondary</item>
-        <item name="textAllCaps">false</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
     <style name="MyCustomToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:textColorPrimary">@color/white</item>
         <item name="android:textColorSecondary">@color/soft_gray</item>
     </style>
-    <style name="CustomActivityAnimation" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/black</item>
-        <item name="colorPrimaryDark">@color/black</item>
-        <item name="colorAccent">@color/black</item>
-        <item name="android:windowContentTransitions">true</item>
-        <item name="android:activityOpenEnterAnimation">@anim/slide_in_bottom</item>
-        <item name="android:activityOpenExitAnimation">@anim/slide_out_top</item>
-        <item name="android:activityCloseEnterAnimation">@anim/slide_in_top</item>
-        <item name="android:activityCloseExitAnimation">@anim/slide_out_bottom</item>
-        <item name="android:windowActivityTransitions">true</item>
-    </style>
 
-    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
-        <item name="android:fontFamily">@font/sf_compact_display_regular</item>
-        <item name="android:textSize">@dimen/text_size_n2</item>
-        <item name="android:textColor">@color/main_text</item>
-        <item name="android:shape">rectangle</item>
-    </style>
-
-    <style name="MyProgressBarCircular" parent="@style/Widget.AppCompat.ProgressBar">
-        <item name="android:indeterminateTint">@color/white</item>
-    </style>
-
-    <style name="TransparentBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
-        <item name="bottomSheetStyle">@style/TransparentBottomSheetStyle</item>
-    </style>
-
-    <style name="TransparentBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
-        <item name="android:background">@android:color/transparent</item>
-    </style>
-
-    <!-- Buttons -->
-    <!--  <style name="MainButton" parent="TextStyle2b">
-          <item name="android:background">@drawable/selector_main_button</item>
-          <item name="android:textColor">@color/white</item>
-          <item name="android:textAllCaps">false</item>
-      </style>-->
 
     <!-- Typography -->
     <style name="TextStyle4">

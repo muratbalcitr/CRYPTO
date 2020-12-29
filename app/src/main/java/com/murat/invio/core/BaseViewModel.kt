@@ -3,7 +3,9 @@ package com.murat.invio.core
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
+import com.murat.invio.data.ApiError
 import com.murat.invio.data.Event
 import retrofit2.HttpException
 import java.net.UnknownHostException
@@ -42,12 +44,12 @@ abstract class BaseViewModel : ViewModel() {
                                 _baseEvent.postValue(Event(BaseViewEvent.ShowInternalServerError))
                             } else {
                                 try {
-                                   /* showCustomError(
+                                    showCustomError(
                                         Gson().fromJson(
                                             e.response()?.errorBody()?.string(),
                                             ApiError::class.java
-                                        ).detail!!
-                                    )*/
+                                        ).detail
+                                    )
                                 } catch (exception: Exception) {
                                     showCommonNetworkError()
                                 }

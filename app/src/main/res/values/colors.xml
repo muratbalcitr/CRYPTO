@@ -23,24 +23,8 @@
     <color name="white">#FFFFFF</color>
     <color name="transparent">#00000000</color>
 
-    <!-- Sky Colors -->
-    <color name="sky_main_red">#FF5A5F</color>
-    <color name="sky_main_green">#FF5A5F</color>
-    <color name="sky_dark_green">#008489</color>
-    <color name="sky_orange">#E86B48</color>
-
-    <color name="sky_login_background">#FAF8F5</color>
-
-    <color name="sky_gray">#768791</color>
-    <color name="sky_alert">#E52929</color>
-
-    <color name="sky_edittext_bg">#F2F3F7</color>
-
-    <color name="sky_navigation_disabled">#BEC0C1</color>
-    <color name="sky_semi_alert">#F2B30F</color>
-    <color name="subtitle">#00252F</color>
-
-    <color name="light_black">#4E4E53</color>
+     <color name="sky_dark_green">#008489</color>
+     <color name="light_black">#4E4E53</color>
     <color name="green">#10AB84</color>
     <color name="moon">#8E97FD</color>
     <color name="login_input_color">#f7f7fa</color>
@@ -49,18 +33,6 @@
     <color name="light_blue">#412196F3</color>
     <color name="login_shadow">#14323247</color>
     <color name="shadow">#51323247</color>
-
-    <color name="profile_myaccount_alt">#E62929</color>
-    <color name="profile_divider">#F6F8FC</color>
-
-    <color name="my_push_notification_color">#222222</color>
-
-    <color name="read_button">#56A180</color>
-    <color name="activity_guest_bg">#28ABB9</color>
-    <color name="activity_money_bg">#2D6187</color>
-    <color name="activity_join_bg">#97C797</color>
-    <color name="activity_notjoin_bg">#FA7F72</color>
-
     <!-- Shadow Colors -->
     <color name="shadow_01">#01CCD0E0</color>
     <color name="shadow_02">#02CCD0E0</color>

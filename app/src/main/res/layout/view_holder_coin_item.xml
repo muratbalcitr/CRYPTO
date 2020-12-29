@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.murat.invio.ui.main.MainViewModel" />
+
+        <variable
+            name="item"
+            type="com.murat.invio.network.responses.CoinsResponse.Data.Coins" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/margin_xlarge"
+        android:background="@drawable/bg_shadow"
+        android:padding="@dimen/padding_page">
+
+        <ImageView
+            android:id="@+id/imageView"
+            imageUrl="@{item.iconUrl}"
+            android:layout_width="@dimen/margin_32dp"
+            android:layout_height="@dimen/margin_32dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_swap_calls_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextStyle3b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_small"
+            android:text="@{item.symbol}"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            tools:text="BTC" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextStyle2b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@{item.priceFormatted}"
+            app:textColor="@{item.color}"
+            tools:text="645,45TL" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

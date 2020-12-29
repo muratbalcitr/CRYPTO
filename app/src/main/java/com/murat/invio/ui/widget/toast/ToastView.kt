@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import coil.api.load
 import com.google.android.material.snackbar.ContentViewCallback
 import com.murat.invio.R
 import com.murat.invio.binding.visible

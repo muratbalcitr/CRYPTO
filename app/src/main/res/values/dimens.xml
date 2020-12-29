@@ -61,8 +61,5 @@
     <dimen name="margin_270dp">270dp</dimen>
     <dimen name="margin_350dp">350dp</dimen>
     <dimen name="margin_300dp">300dp</dimen>
-    <dimen name="vehicle_item_width">277dp</dimen>
-    <dimen name="navigation_drawer_width">260dp</dimen>
-    <dimen name="nav_header_height">100dp</dimen>
 
 </resources>
