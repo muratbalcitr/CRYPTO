@@ -1,67 +1,79 @@
 package com.murat.invio.network.responses
 
+import android.graphics.Color
 import com.google.gson.annotations.SerializedName
+import java.util.regex.Pattern
 
 data class CoinsResponse(
     @SerializedName("status")
-    val status: String,
+    val status: String?,
     @SerializedName("data")
     val data: Data
 ) {
     data class Data(
         @SerializedName("stats")
-        val stats: Stats,
+        val stats: Stats?,
         @SerializedName("coins")
         val coins: ArrayList<Coins?>?
     ) {
 
         data class Stats(
             @SerializedName("total")
-            val total: Int,
+            val total: Int?,
             @SerializedName("totalMarkets")
-            val totalMarkets: Int,
+            val totalMarkets: Int?,
             @SerializedName("totalExchanges")
-            val totalExchanges: Int,
+            val totalExchanges: Int?,
             @SerializedName("totalMarketCap")
-            val totalMarketCap: String,
+            val totalMarketCap: String?,
             @SerializedName("total24hVolume")
-            val total24hVolume: String
+            val total24hVolume: String?
         )
 
         data class Coins(
             @SerializedName("uuid")
-            val uuid: String,
+            val uuid: String?,
             @SerializedName("symbol")
-            val symbol: String,
+            val symbol: String?,
             @SerializedName("name")
-            val name: String,
+            val name: String?,
             @SerializedName("color")
-            val color: String,
+            val color: String?,
             @SerializedName("iconUrl")
-            val iconUrl: String,
+            val iconUrl: String?,
             @SerializedName("marketCap")
-            val marketCap: String,
+            val marketCap: String?,
             @SerializedName("price")
-            val price: String,
+            val price: String?,
             @SerializedName("listedAt")
-            val listedAt: Int,
+            val listedAt: Int?,
             @SerializedName("tier")
-            val tier: Int,
+            val tier: Int?,
             @SerializedName("change")
-            val change: String,
+            val change: String?,
             @SerializedName("rank")
-            val rank: Int,
+            val rank: Int?,
             @SerializedName("sparkline")
-            val spirkline: ArrayList<String>,
+            val spirkline: ArrayList<String>?,
             @SerializedName("coinrankingUrl")
-            val coinrankingUrl: String,
+            val coinrankingUrl: String?,
             @SerializedName("24hVolume")
-            val dayVolumeval: String,
+            val dayVolumeval: String?,
             @SerializedName("btcPrice")
-            val btcPrice: String
+            val btcPrice: String?
         ) {
-            val priceFormatted: String
-                get() = price.substring(0,5)
+            var priceFormatted: String? = null
+                get() {
+                    val split = price?.replace(".",",")?.split(Pattern.compile(",") , 2)
+                    return (split?.get(0)) +"."+ (split?.get(1)?.substring(0, 2))
+                }
+
+            val colors: Int
+                get() = try {
+                    Color.parseColor(color ?: "#000000")
+                } catch (e: IllegalArgumentException) {
+                    Color.parseColor("#000000")
+                }
 
         }
 

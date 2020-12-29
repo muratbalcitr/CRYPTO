@@ -1,12 +1,9 @@
 package com.murat.invio.binding
 
- import android.graphics.Color
-import android.graphics.drawable.Drawable
-import android.widget.ImageView
-import androidx.appcompat.widget.AppCompatTextView
-import androidx.databinding.BindingAdapter
+ import android.graphics.drawable.Drawable
+ import android.widget.ImageView
+ import androidx.databinding.BindingAdapter
  import coil.api.load
- import com.pixplicity.sharp.Sharp
 
 @BindingAdapter("imageUrl")
 fun loadImage(imageView: ImageView, url: String?) {
@@ -28,8 +25,4 @@ fun bindButtonTitle(imageView: ImageView, clickable: Boolean) {
 @BindingAdapter("imageDrawable")
 fun loadImage(imageView: ImageView,  url: Drawable?) {
     imageView.setImageDrawable(url)
-}
-@BindingAdapter("app:textColor")
-fun textColor(textView: AppCompatTextView,  color: String?) {
-    textView.setTextColor(Color.parseColor(color))
 }

@@ -1,72 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- Shadow layers -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:left="1dp"
-        android:right="1dp"
-        android:top="3dp">
-        <shape>
-            <corners android:radius="10dp" />
-            <padding
-                android:bottom="1dp"
-                android:left="1dp"
-                android:right="1dp"
-                android:top="1dp" />
-            <solid android:color="@color/shadow_13" />
-        </shape>
-    </item>
-    <item
-        android:left="1dp"
-        android:right="1dp"
-        android:top="3dp">
-        <shape>
-            <corners android:radius="10dp" />
-            <padding
-                android:bottom="1dp"
-                android:left="1dp"
-                android:right="1dp"
-                android:top="1dp" />
-            <solid android:color="@color/shadow_14" />
-        </shape>
-    </item>
-    <item
-        android:left="1dp"
-        android:right="1dp"
-        android:top="3dp">
-        <shape>
-            <corners android:radius="10dp" />
-            <padding
-                android:bottom="1dp"
-                android:left="1dp"
-                android:right="1dp"
-                android:top="1dp" />
-            <solid android:color="@color/shadow_15" />
-        </shape>
-    </item>
-    <item
-        android:left="1dp"
-        android:right="1dp"
-        android:top="3dp">
-        <shape>
-            <corners android:radius="10dp" />
-            <padding
-                android:bottom="1dp"
-                android:left="1dp"
-                android:right="1dp"
-                android:top="1dp" />
-            <solid android:color="@color/soft_gray" />
-        </shape>
-    </item>
-
-    <!-- Background layer -->
-    <item>
-        <shape>
-
-            <solid android:color="@color/white" />
-            <corners android:radius="10dp" />
-        </shape>
-    </item>
-
-</layer-list>
+    <solid android:color="@color/white" />
+    <corners android:radius="10dp" />
+    <stroke
+        android:color="@color/soft_gray"
+        android:width="@dimen/margin_1dp"
+        android:dashWidth="@dimen/margin_1dp" />
+</shape>

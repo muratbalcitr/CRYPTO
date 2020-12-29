@@ -47,7 +47,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:text="@{item.priceFormatted}"
-            app:textColor="@{item.color}"
+            android:textColor="@{item.colors}"
             tools:text="645,45TL" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
