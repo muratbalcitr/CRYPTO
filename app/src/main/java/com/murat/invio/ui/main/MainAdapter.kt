@@ -3,6 +3,7 @@ package com.murat.invio.ui.main
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.drawable.PictureDrawable
+import android.net.Uri
 import android.os.Handler
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -103,12 +104,13 @@ class MainAdapter(
         ) {
             binding.viewModel = viewModel
             binding.item = coinResponse
+            val uri = Uri.parse(coinResponse.iconUrl)
             val requestBuilder = Glide.with(context)
                 .`as`(PictureDrawable::class.java)
                 .placeholder(R.drawable.ic_swap_calls_black_24dp)
                 .transition(withCrossFade())
                 .listener(SvgSoftwareLayerSetter())
-            requestBuilder.load(coinResponse.iconUrl).into(binding.imageView)
+            requestBuilder.load(uri).into(binding.imageView)
             binding.executePendingBindings()
         }
     }

@@ -26,12 +26,15 @@ class MainViewModel(
     val limit = MutableLiveData<Int>(10)
 
     fun getCoins(offset: Int) = viewModelScope.launch {
+        setLoading(true)
         val response = apiRepository.getCoins(limit.value!!, offset)
         when (response) {
             is Result.Success -> {
+                setLoading(false)
                 _coins.postValue(response.data)
             }
             is Result.Error -> {
+                setLoading(false)
                 handleException(response.exception)
             }
         }

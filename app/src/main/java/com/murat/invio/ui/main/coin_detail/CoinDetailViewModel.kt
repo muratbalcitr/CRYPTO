@@ -19,12 +19,15 @@ class CoinDetailViewModel(private val apiRepository: ApiRepository) : BaseViewMo
     val coinDetail = MutableLiveData<CoinsDetailResponse>()
 
     fun getDetailsCoins(uuid: String) = viewModelScope.launch {
+        setLoading(true)
         val response = apiRepository.getCoinsDetail(uuid)
         when (response) {
             is Result.Success -> {
+                setLoading(false)
                 coinDetail.postValue(response.data)
             }
             is Result.Error -> {
+                setLoading(false)
                 handleException(response.exception)
             }
         }

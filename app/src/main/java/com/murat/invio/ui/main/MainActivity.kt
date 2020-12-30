@@ -1,9 +1,15 @@
 package com.murat.invio.ui.main
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.Drawable
+import android.os.AsyncTask
 import android.os.Handler
+import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.caverock.androidsvg.SVG
 import com.murat.invio.R
 import com.murat.invio.core.BaseActivity
 import com.murat.invio.databinding.ActivityMainBinding
@@ -13,6 +19,9 @@ import com.murat.invio.network.responses.CoinsResponse
 import com.murat.invio.ui.main.coin_detail.CoinDetailActivity
 import com.murat.invio.utils.OnLoadMoreListener
 import com.murat.invio.utils.RecyclerViewLoadMoreScroll
+import java.io.InputStream
+import java.net.HttpURLConnection
+import java.net.URL
 
 
 class MainActivity :
@@ -50,7 +59,7 @@ class MainActivity :
 
     private fun onViewEvent(event: MainViewEvent) {
         when (event) {
-            is MainViewEvent.NavigateToDetail->{
+            is MainViewEvent.NavigateToDetail -> {
                 startActivity(event.item.uuid?.let { CoinDetailActivity.newIntent(this, it) })
             }
         }
@@ -58,7 +67,7 @@ class MainActivity :
 
     private fun onDataChange(item: CoinsResponse) {
         if (viewModel.offset.value == 1) {
-            mainAdapter = MainAdapter(item.data.coins, viewModel,this)
+            mainAdapter = MainAdapter(item.data.coins, viewModel, this)
             viewBinding.recyclerView.apply {
                 this.setHasFixedSize(true)
                 this.adapter = mainAdapter
