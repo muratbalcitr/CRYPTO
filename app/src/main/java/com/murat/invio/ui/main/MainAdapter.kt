@@ -2,21 +2,15 @@ package com.murat.invio.ui.main
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.drawable.PictureDrawable
-import android.net.Uri
 import android.os.Handler
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
-import com.murat.invio.R
 import com.murat.invio.core.BaseListAdapter
 import com.murat.invio.core.BaseViewHolder
 import com.murat.invio.databinding.ItemLoadingBinding
 import com.murat.invio.databinding.ViewHolderCoinItemBinding
 import com.murat.invio.network.responses.CoinsResponse
-import com.murat.invio.utils.svg.SvgSoftwareLayerSetter
 
 
 class MainAdapter(
@@ -104,13 +98,6 @@ class MainAdapter(
         ) {
             binding.viewModel = viewModel
             binding.item = coinResponse
-            val uri = Uri.parse(coinResponse.iconUrl)
-            val requestBuilder = Glide.with(context)
-                .`as`(PictureDrawable::class.java)
-                .placeholder(R.drawable.ic_swap_calls_black_24dp)
-                .transition(withCrossFade())
-                .listener(SvgSoftwareLayerSetter())
-            requestBuilder.load(uri).into(binding.imageView)
             binding.executePendingBindings()
         }
     }

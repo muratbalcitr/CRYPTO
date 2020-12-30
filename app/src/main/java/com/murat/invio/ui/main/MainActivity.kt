@@ -1,15 +1,9 @@
 package com.murat.invio.ui.main
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.graphics.drawable.Drawable
-import android.os.AsyncTask
 import android.os.Handler
-import android.util.Log
-import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.caverock.androidsvg.SVG
 import com.murat.invio.R
 import com.murat.invio.core.BaseActivity
 import com.murat.invio.databinding.ActivityMainBinding
@@ -19,9 +13,6 @@ import com.murat.invio.network.responses.CoinsResponse
 import com.murat.invio.ui.main.coin_detail.CoinDetailActivity
 import com.murat.invio.utils.OnLoadMoreListener
 import com.murat.invio.utils.RecyclerViewLoadMoreScroll
-import java.io.InputStream
-import java.net.HttpURLConnection
-import java.net.URL
 
 
 class MainActivity :
@@ -38,10 +29,7 @@ class MainActivity :
         observeEvent(viewModel.event, ::onViewEvent)
         observe(viewModel.coins, ::onDataChange)
         setup()
-        /* viewBinding.swipe.setOnRefreshListener {
-             swipe.isRefreshing=false
-             viewModel.getCoins(viewModel.offset.value!!)
-         }*/
+
         viewModel.getCoins(viewModel.offset.value!!)
     }
 
