@@ -14,11 +14,6 @@ import com.murat.invio.databinding.ActivityPreloginBinding
 import com.murat.invio.ui.main.MainActivity
 import kotlinx.android.synthetic.main.activity_prelogin.*
 
-/**
- * @user: omer.karaca
- * @date: 2020-02-24
- */
-
 class PreLoginActivity :
     BaseActivity<ActivityPreloginBinding, PreLoginViewModel>(
         R.layout.activity_prelogin
