@@ -29,8 +29,6 @@ class PreLoginActivity :
     private var currentDestination = PreLoginDestination.SPLASH
     private lateinit var navGraph: NavGraph
     override fun onInitDataBinding() {
-        isMoov = intent.getBooleanExtra(HOW_MOOV, false)
-        isMoovWelcome = intent.getBooleanExtra(HOW_MOOV_WELCOME, false)
         setNavigation()
     }
 
@@ -61,11 +59,5 @@ class PreLoginActivity :
         arguments: Bundle?
     ) {
         setCurrentDestination(PreLoginDestination.find(destination.id))
-    }
-
-    override fun onBackPressed() {
-
-        super.onBackPressed()
-
     }
 }
