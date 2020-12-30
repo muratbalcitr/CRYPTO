@@ -67,39 +67,5 @@ class PreLoginActivity :
 
         super.onBackPressed()
 
-        /*
-        when {
-            isMoov -> {
-                super.onBackPressed().also {
-                    finish()
-                }
-            }
-            intent.getBooleanExtra(HOW_MOOV, false) -> {
-                startActivity(MainActivity.newIntent(this))
-            }
-            else -> super.onBackPressed()
-        }
-        */
-    }
-
-    companion object {
-
-        const val HOW_MOOV = "hoow_mov"
-        const val HOW_MOOV_WELCOME = "hoow_mov_welcome"
-        var isMoov: Boolean = false
-        var isMoovWelcome: Boolean = false
-
-        fun newIntent(context: Context) =
-            Intent(context, PreLoginActivity::class.java)
-
-        fun newIntent(context: Context, isMoov: Boolean) =
-            Intent(context, PreLoginActivity::class.java).apply {
-                putExtra(HOW_MOOV, isMoov)
-            }
-
-        fun newIntent(context: Context, isMoov: Boolean = false, isMoovWelcome: Boolean) =
-            Intent(context, PreLoginActivity::class.java).apply {
-                putExtra(HOW_MOOV_WELCOME, isMoovWelcome)
-            }
     }
 }
